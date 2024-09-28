@@ -46,7 +46,7 @@ Now managed by CNCF(Cloud Native Computing Foundation)
 6. Seacreat and configuration management
 7. Community Support
 __________________________________
-### Master node (control plane), Worker nodes
+## Master node (control plane), Worker nodes
 
 1. Master node 4 primery service in master node
    * Api Server
@@ -57,4 +57,11 @@ __________________________________
    * kubelet
    * proxy
    * docker engine
-  
+## KUBE API SERVER
+
+* enable communication across services
+* exposes k8s API
+* front end of the control plane
+* kubectl cli commands is usesd to connect to kube api
+* kubectli needed to be installed
+
