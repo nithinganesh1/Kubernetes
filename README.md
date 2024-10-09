@@ -65,3 +65,34 @@ __________________________________
 * kubectl cli commands is usesd to connect to kube api
 * kubectli needed to be installed
 
+## ETCD 
+* key value store
+* store the info about the k8s cluster
+* Kube api stores and retrive data from the etcd Server
+* store all runtime info and should be backed up regularly
+
+## Schedule conatiner in the right node
+watch for the request, scheduler will pick up the right node and send message "heii, you conainer"
+factors to choose the right container
+
+    1. Resource requirement
+    2. hardware/software/policy constraints
+    3. affinity and anti-affinity specifications(i need to run on a specific node or vise versa) ie, i want run this container or i don't want run this container run remening all.
+
+## Controller manager
+logically each controller is a seperate process to reducfe complexity, they are all compiled into a single binary and run in a single process it includes 
+* node controller
+* replication controller
+* end point controller
+* service account and token controller
+* work node components
+
+## Kubelet (agent)
+listen to master requests or commands
+
+runs in every nodes of a cluster, make sure that containers are running in a pod
+
+when sheculer assigns a node, it assign kubelet to run it 
+
+it pull the image and run the container 
+
